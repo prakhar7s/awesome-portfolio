@@ -1,0 +1,33 @@
+.main {
+  min-height: 100vh;
+  width: 90%;
+  background: #1b1b1b;
+  margin: 40px auto;
+  color: white;
+  display: flex;
+  padding: 0 4%;
+}
+
+.left-section {
+  width: 50%;
+}
+
+.right-section {
+  width: 50%;
+  position: relative;
+}
+
+.right-section .image {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+.right-section .image img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
