@@ -1,14 +1,23 @@
 * {
   box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "IBM Plex Sans", sans-serif;
 }
 
-body {
-  background: black;
+.fc-yellow {
+  color: #e0a858;
+}
+.app {
+  position: relative;
+}
+
+:root {
+  --bgColor: #ffffff;
+  --fontColor: #000000;
+  --borderColor: rgba(0, 0, 0, 0.15);
 }
