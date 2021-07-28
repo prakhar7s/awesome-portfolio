@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import "../styles/main.css";
 import CustomButton from "./custom-button/custom-button";
-import myPic from "../assets/my-pic.png";
 
 import NightsStayIcon from "@material-ui/icons/NightsStay";
 import WbSunnyIcon from "@material-ui/icons/WbSunny";
@@ -27,12 +26,12 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="my-image"></div>
+      {!isDarkMode && <div className="my-image"></div>}
       <footer>
-        <a href="#Github">
+        <a href="https://github.com/prakhar7s" target="blank">
           Github <span className="line"></span>
         </a>
-        <a href="#linkedin">
+        <a href="https://linkedin.com/in/prakhar7s" target="blank">
           LinkedIn <span className="line"></span>
         </a>
         <div>

@@ -90,15 +90,15 @@ footer a {
 footer a .line {
   position: absolute;
   width: 100%;
-  height: 15px;
+  height: 10px;
   left: 0;
   bottom: -10px;
   transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 footer a:hover .line {
-  background: #d9594c;
-  bottom: -5px;
-  height: 4px;
+  background: #f35544;
+  bottom: 0px;
+  height: 2px;
 }
 
 footer div {
