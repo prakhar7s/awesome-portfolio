@@ -2,6 +2,8 @@ import Aos from "aos";
 import { useEffect } from "react";
 import "./App.css";
 
+import { ToastProvider } from "react-toast-notifications";
+
 import Main from "./components/Main";
 
 function App() {
@@ -15,7 +17,9 @@ function App() {
 
   return (
     <div className="app">
-      <Main />
+      <ToastProvider>
+        <Main />
+      </ToastProvider>
     </div>
   );
 }

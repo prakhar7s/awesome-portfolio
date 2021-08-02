@@ -6,8 +6,19 @@ import CustomButton from "./custom-button/custom-button";
 import NightsStayIcon from "@material-ui/icons/NightsStay";
 import WbSunnyIcon from "@material-ui/icons/WbSunny";
 
+import { useToasts } from "react-toast-notifications";
+
 const Main = () => {
   const [isDarkMode, setDarkMode] = useState(false);
+  const { addToast } = useToasts();
+
+  const taostMsg = (msg) => {
+    addToast(msg, {
+      appearance: "success",
+      autoDismiss: true,
+      autoDismissTimeout: 2000,
+    });
+  };
 
   return (
     <div className={`main${isDarkMode ? " dark-mode" : ""}`}>
@@ -36,11 +47,22 @@ const Main = () => {
         </a>
         <div>
           {isDarkMode ? (
-            <span onClick={() => setDarkMode(false)}>
+            <span
+              onClick={() => {
+                setDarkMode(false);
+
+                taostMsg("Light mode on!");
+              }}
+            >
               <WbSunnyIcon />
             </span>
           ) : (
-            <span onClick={() => setDarkMode(true)}>
+            <span
+              onClick={() => {
+                setDarkMode(true);
+                taostMsg("Dark mode on!");
+              }}
+            >
               <NightsStayIcon />
             </span>
           )}
