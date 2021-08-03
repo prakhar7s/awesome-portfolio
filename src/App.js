@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="app">
-      <ToastProvider>
+      <ToastProvider newestOnTop={true}>
         <Main />
       </ToastProvider>
     </div>

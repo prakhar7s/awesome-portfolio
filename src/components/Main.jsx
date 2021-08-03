@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "../styles/main.css";
 import CustomButton from "./custom-button/custom-button";
@@ -19,6 +19,9 @@ const Main = () => {
       autoDismissTimeout: 2000,
     });
   };
+  useEffect(() => {
+    console.clear();
+  }, []);
 
   return (
     <div className={`main${isDarkMode ? " dark-mode" : ""}`}>

@@ -8,19 +8,21 @@
   color: var(--fontColor);
   overflow: hidden;
   height: 100vh;
-  padding: 0 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: 0.7s color, 0.4s background;
+  padding: clamp(2px, 4rem, 10vw);
+  padding-top: 0;
 }
 
 .main .information {
   width: 60%;
+  width: clamp(30rem, 70%, 80vw);
 }
 
 .main .tagline {
-  font-size: 60px;
+  font-size: clamp(10px, 10vw, 4rem);
 }
 
 .email-n-number {
@@ -75,6 +77,7 @@ footer {
   display: flex;
   left: 0;
   padding: 20px 100px;
+  padding: 20px clamp(10px, 10vw, 4rem);
   border-top: 1px solid var(--borderColor);
 }
 
@@ -105,30 +108,10 @@ footer div {
   margin-left: auto;
 }
 
-/* Tablet View */
-@media screen and (max-width: 1180px) {
-  .information {
-    width: 80% !important;
-  }
-
-  .my-image {
-    display: none;
-  }
-}
-
 /* Mobile View */
 @media screen and (max-width: 776px) {
-  .main,
-  footer {
-    padding: 20px;
-  }
-
-  .tagline {
-    font-size: 50px !important;
-  }
-
-  .information {
-    width: 100% !important;
+  .my-image {
+    display: none;
   }
 
   .options {
