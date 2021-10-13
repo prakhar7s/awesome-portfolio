@@ -8,6 +8,14 @@ import WbSunnyIcon from "@material-ui/icons/WbSunny";
 
 import { useToasts } from "react-toast-notifications";
 
+import {
+  GITHUB_URL,
+  HACKERRANK_LINK,
+  LEETCODE_LINK,
+  LINKEDIN_URL,
+  RESUME_LINK,
+} from "../utils/information.js";
+
 const Main = () => {
   const [isDarkMode, setDarkMode] = useState(false);
   const { addToast } = useToasts();
@@ -30,24 +38,44 @@ const Main = () => {
           A <span className="fc-yellow">21 years</span> old Software Engineer
         </h1>
         <div className="email-n-number">
-          <span>prakharshrivastava971@gmail.com</span>
-          <span>(+91) 7440580412</span>
+          <h4>prakharshrivastava971@gmail.com</h4>
+          <h4>(+91) 7440580412</h4>
         </div>
         <div className="options">
-          <CustomButton label="Download my resume" color="#e0a858" />
-          <CustomButton label="Have an advise for me" color="#419d78" />
-          <CustomButton label="Get in touch" color="#d9594c" />
+          <CustomButton
+            label="Download my resume"
+            redirectTo={RESUME_LINK}
+            color="#e0a858"
+          />
+          <CustomButton
+            label="Have an advise for me"
+            redirectTo={LINKEDIN_URL}
+            color="#419d78"
+          />
+          <CustomButton
+            label="Get in touch"
+            redirectTo={LINKEDIN_URL}
+            color="#d9594c"
+          />
         </div>
       </div>
 
       {!isDarkMode && <div className="my-image"></div>}
       <footer>
-        <a href="https://github.com/prakhar7s" target="blank">
-          Github <span className="line"></span>
-        </a>
-        <a href="https://linkedin.com/in/prakhar7s" target="blank">
-          LinkedIn <span className="line"></span>
-        </a>
+        <div className="profile-links">
+          <a href={GITHUB_URL} target="_blank">
+            Github <span className="line"></span>
+          </a>
+          <a href={LINKEDIN_URL} target="_blank">
+            LinkedIn <span className="line"></span>
+          </a>
+          <a href={HACKERRANK_LINK} target="_blank">
+            Hackerrank <span className="line"></span>
+          </a>
+          <a href={LEETCODE_LINK} target="_blank">
+            Leetcode <span className="line"></span>
+          </a>
+        </div>
         <div>
           {isDarkMode ? (
             <span

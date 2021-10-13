@@ -7,7 +7,7 @@
   background-color: var(--bgColor);
   color: var(--fontColor);
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,16 +75,25 @@ footer {
   bottom: 10px;
   width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   left: 0;
   padding: 20px 100px;
   padding: 20px clamp(10px, 10vw, 4rem);
   border-top: 1px solid var(--borderColor);
 }
 
-footer a {
-  margin-right: 40px;
+footer .profile-links {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .profile-links a {
+  min-width: 100px;
+  margin: 5px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: clamp(12px, 2vw, 1rem);
   color: var(--fontColor);
   position: relative;
   font-family: "Montserrat", sans-serif;

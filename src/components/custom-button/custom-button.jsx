@@ -1,11 +1,16 @@
 import "./custom-button.css";
 
-const CustomButton = ({ label, color }) => {
+const CustomButton = ({ label, color, redirectTo }) => {
   return (
-    <button className="custom-button" style={{ color }}>
+    <a
+      href={redirectTo}
+      className="custom-button"
+      target="_blank"
+      style={{ color }}
+    >
       {label}
       <span className="line" style={{ background: color }}></span>
-    </button>
+    </a>
   );
 };
 
