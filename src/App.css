@@ -1,23 +1,27 @@
 * {
   box-sizing: border-box;
-  font-family: "Roboto Slab", serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.fc-yellow {
-  color: #e0a858;
-}
+body,
+#root,
 .app {
-  position: relative;
+  margin: 0;
+  min-height: 100%;
 }
 
-:root {
-  --bgColor: #ffffff;
-  --fontColor: #000000;
-  --borderColor: rgba(0, 0, 0, 0.15);
+body {
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f3f5f7;
+  color: #121820;
+}
+
+::selection {
+  background: rgba(47, 95, 143, 0.22);
 }

@@ -1,25 +1,21 @@
-import Aos from "aos";
 import { useEffect } from "react";
+import Aos from "aos";
 import "./App.css";
-
-import { ToastProvider } from "react-toast-notifications";
-
 import Main from "./components/Main";
 
 function App() {
   useEffect(() => {
     Aos.init({
-      offset: 200,
-      duration: 600,
-      easing: "ease-in-sine",
+      offset: 80,
+      duration: 700,
+      easing: "ease-out-cubic",
+      once: true,
     });
   }, []);
 
   return (
     <div className="app">
-      <ToastProvider newestOnTop={true}>
-        <Main />
-      </ToastProvider>
+      <Main />
     </div>
   );
 }
